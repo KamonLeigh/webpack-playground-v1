@@ -7,7 +7,7 @@ module.exports = {
   entry: './src/app.js',
   output: {
     path: path.resolve(__dirname, 'public'),
-    filename: 'app.js',
+    filename: 'app.[contenthash].js',
   },
   module: {
     rules: [
@@ -34,6 +34,7 @@ module.exports = {
   }),
   new HtmlWebpackPlugin({
     title: 'I like webpack',
+    template: './src/template.html',
   }),
   ],
   devtool: 'inline-source-map',
