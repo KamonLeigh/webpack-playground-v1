@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import Person from './person';
-import './main.css';
+import './main.scss';
 import { hello, world } from './hello';
 
 const firstName = 'Byron';
