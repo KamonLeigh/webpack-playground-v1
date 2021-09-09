@@ -3,12 +3,7 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
   entry: './src/app.js',
-  output: {
-    path: path.resolve(__dirname, 'public'),
-    filename: 'app.[contenthash].js',
-  },
   module: {
     rules: [
       {
@@ -37,12 +32,4 @@ module.exports = {
     template: './src/template.html',
   }),
   ],
-  devtool: 'inline-source-map',
-  devServer: {
-    static: {
-      directory: path.join(__dirname, 'public'),
-    },
-    compress: true,
-    port: 9000,
-  },
 };
