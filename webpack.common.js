@@ -20,6 +20,16 @@ module.exports = {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
+      {
+        test: /\.html$/,
+        use: ['html-loader'],
+      }, {
+        test: /\.(svg|png|jpg|jpeg|gif)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'imgs/[name][hash][ext]',
+        },
+      },
     ],
   },
   plugins: [new ESLintPlugin({
