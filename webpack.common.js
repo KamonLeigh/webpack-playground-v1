@@ -3,7 +3,10 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/app.js',
+  entry: {
+    main: './src/app.js',
+    vendor: './src/vendor.js',
+  },
   module: {
     rules: [
       {
